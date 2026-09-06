@@ -1,52 +1,30 @@
-let userRole = "admin";
-let accessLevel;
-
-if (userRole === "admin") {
-    accessLevel = "Full access granted";
-} else if (userRole === "manager") {
-    accessLevel = "Limited access granted";
-} else {
-    accessLevel = "No access granted";
-}
-
-console.log("Access Level:", accessLevel);
-
-let isLoggedIn = true;
-let userMessage;
-
-if (isLoggedIn) {
-    if (userRole === "admin") {
-        userMessage = "Welcome, Admin!";
-    } else {
-        userMessage = "Welcome, User!";
-    }
-} else {
-    userMessage = "Please log in to access the system.";
-}
-
-console.log("User Message:", userMessage);
-
-let userType = "subscriber";
+let userType = "Employee";
 let userCategory;
+let userPrivilege;
+let userRequirement;
 
 switch (userType) {
-    case "admin":
-        userCategory = "Administrator";
+    case "Employee":
+        userCategory = "Dietary Services";
+        userPrivilege = "None";
+        userRequirement = "Enroll to access dietician interactions";
         break;
-    case "manager":
-        userCategory = "Manager";
+    case "Enrolled Member":
+        userCategory = "Dietary Services";
+        userPrivilege = "One-on-one interaction with dietician";
+        userRequirement = "None"
         break;
-    case "subscriber":
-        userCategory = "Subscriber";
+    case "Subscriber":
+        userCategory = "Partial Dietary Services";
+        userPrivilege = "None";
+        userRequirement = "Become an employee to fully access dietary services";
         break;
-    default:
-        userCategory = "Unknown";
+    case "Non-Subscriber":
+        userCategory = "None";
+        userRequirement = "Subscribe first";
+        userPrivilege = "None";
 }
 
-console.log("User Category:", userCategory);
-
-let isAuthenticated = true;
-
-let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
-
-console.log("Authentication Status:", authenticationStatus);
+console.log("User Category: ", userCategory);
+console.log("User privileges: ", userPrivilege);
+console.log("Rquirements: ", userRequirement);
