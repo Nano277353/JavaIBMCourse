@@ -6,6 +6,7 @@ const designation = document.getElementById('designation').value;
 const productType = document.getElementById('productType').value;
 const feedback = document.getElementById('feedbackText').value;
 const username = document.getElementById('name').value;
+const experience = document.getElementById('userExperience').value;
     alert('Thank you for your valuable feedback');
     document.getElementById('userName').innerHTML = username;
     document.getElementById('userAge').innerHTML = age;
@@ -14,6 +15,7 @@ const username = document.getElementById('name').value;
     document.getElementById('userDesignation').innerHTML = designation;
     document.getElementById('userProductChoice').innerHTML = productType;
     document.getElementById('userFeedback').innerHTML = feedback;
+    document.getElementById('userExperienceDisplay').innerHTML = experience;
     document.getElementById('userInfo').style.display = 'block';
 }
 
